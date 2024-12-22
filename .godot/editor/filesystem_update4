@@ -7,3 +7,5 @@ res://scenes/ui/pause_menu.tscn
 res://scenes/ui/pause_menu.gd
 res://scenes/levels/level.tscn
 res://scenes/levels/level.gd
+res://scenes/characters/player.tscn
+res://scenes/characters/player.gd
