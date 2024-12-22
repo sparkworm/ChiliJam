@@ -1,0 +1,7 @@
+res://scenes/game/game.tscn
+res://scenes/game/game.gd
+res://scenes/ui/main_menu.tscn
+res://scenes/ui/main_menu.gd
+res://globals/autoload/message_bus.gd
+res://scenes/ui/pause_menu.tscn
+res://scenes/ui/pause_menu.gd
