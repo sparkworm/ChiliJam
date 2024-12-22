@@ -1,6 +1,9 @@
+WorldEnvironment
+Node2D
+TileMapLayer
+Node
 Button
 VBoxContainer
 MarginContainer
 PanelContainer
 CanvasLayer
-Node
