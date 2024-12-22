@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhploj4iolbpx"]
+
+[ext_resource type="Script" path="res://scenes/characters/player.gd" id="1_ko37n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tq2pj"]
+radius = 4.12311
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_ko37n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tq2pj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

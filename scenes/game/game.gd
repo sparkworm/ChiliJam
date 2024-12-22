@@ -11,7 +11,7 @@ func _ready() -> void:
 	var quit_call := Callable(self, "quit_game")
 	MessageBus.game_quit.connect(quit_call)
 
-func _process(delta) -> void:
+func _process(_delta) -> void:
 	if Input.is_action_just_pressed("pause"):
 		toggle_pause()
 
