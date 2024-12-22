@@ -15,6 +15,11 @@ func _process(delta) -> void:
 	if Input.is_action_just_pressed("pause"):
 		toggle_pause()
 
+## Deletes old level and instantiates the specified new level.
+func change_level(new_level: PackedScene) -> void:
+	current_scene_parent.get_child(0).queue_free()
+	current_scene_parent.add_child(new_level.instantiate())
+
 ## Quits the game.
 func quit_game() -> void:
 	get_tree().quit()

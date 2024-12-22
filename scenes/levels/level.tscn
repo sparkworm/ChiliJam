@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4if5uedqfonx"]
+
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_kf2wx"]
+
+[sub_resource type="Environment" id="Environment_6vqfj"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_kf2wx")
+
+[node name="Characters" type="Node2D" parent="."]
+
+[node name="Projectiles" type="Node2D" parent="."]
+
+[node name="World" type="Node2D" parent="."]
+
+[node name="Walls" type="TileMapLayer" parent="World"]
+
+[node name="Floor" type="TileMapLayer" parent="World"]
+
+[node name="Decoration" type="Node2D" parent="World"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6vqfj")
