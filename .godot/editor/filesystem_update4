@@ -1,11 +1,1 @@
-res://scenes/game/game.tscn
-res://scenes/game/game.gd
-res://scenes/ui/main_menu.tscn
-res://scenes/ui/main_menu.gd
-res://globals/autoload/message_bus.gd
-res://scenes/ui/pause_menu.tscn
-res://scenes/ui/pause_menu.gd
-res://scenes/levels/level.tscn
-res://scenes/levels/level.gd
-res://scenes/characters/player.tscn
-res://scenes/characters/player.gd
+res://scenes/characters/crawler.tscn
