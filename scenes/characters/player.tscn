@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhploj4iolbpx"]
+[gd_scene load_steps=5 format=3 uid="uid://dhploj4iolbpx"]
 
 [ext_resource type="Script" path="res://scenes/characters/player.gd" id="1_ko37n"]
+[ext_resource type="Texture2D" uid="uid://cq7jteaukb7kc" path="res://visual/player_hat.png" id="2_iwn6o"]
+[ext_resource type="Texture2D" uid="uid://g5v15kqrbr8d" path="res://visual/player_body.png" id="2_p6rnv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tq2pj"]
 radius = 4.12311
@@ -11,4 +13,12 @@ script = ExtResource("1_ko37n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_tq2pj")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Body" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_p6rnv")
+
+[node name="Hat" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_iwn6o")
+
+[node name="Camera2D" type="Camera2D" parent="."]
