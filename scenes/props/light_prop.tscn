@@ -7,5 +7,6 @@
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+energy = 0.5
 shadow_enabled = true
 texture = ExtResource("1_gj6nu")
