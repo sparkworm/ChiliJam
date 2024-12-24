@@ -9,10 +9,10 @@ extends CharacterBody2D
 func _process(delta: float) -> void:
 	# make the hat look in the direction of the mouse
 	# NOTE: should only be done when the player isn't moving
-	hat.rotation = get_angle_to(get_global_mouse_position())+PI/2
+	hat.rotation = get_angle_to(get_global_mouse_position()) + PI/2
 	if abs(angle_difference(hat.rotation, body.rotation)) > max_look_angle:
 		if abs(angle_difference(hat.rotation + max_look_angle, body.rotation)) < \
-				abs(angle_difference(hat.rotation - max_look_angle , body.rotation)):
+				abs(angle_difference(hat.rotation - max_look_angle, body.rotation)):
 			body.rotation = hat.rotation + max_look_angle
 		else:
 			body.rotation = hat.rotation - max_look_angle
