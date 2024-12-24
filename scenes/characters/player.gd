@@ -9,16 +9,23 @@ extends CharacterBody2D
 
 func _process(delta: float) -> void:
 	handle_movement()
-	# make the hat look in the direction of the mouse
-	hat.rotation = get_angle_to(get_global_mouse_position()) + PI/2
-	if abs(angle_difference(hat.rotation, body.rotation)) > max_look_angle:
-		if abs(angle_difference(hat.rotation + max_look_angle, body.rotation)) < \
-				abs(angle_difference(hat.rotation - max_look_angle, body.rotation)):
-			body.rotation = hat.rotation + max_look_angle
-		else:
-			body.rotation = hat.rotation - max_look_angle
+	handle_look()
 
 func handle_movement() -> void:
 	var movement_vec: Vector2 = Input.get_vector("left", "right", "up", "down")
 	velocity = movement_vec * speed
 	move_and_slide()
+
+## Makes the hat look in the direction of the mouse.  Makes the entire player
+## rotate towards the direction of the mouse, but with a buffer zone of
+## max_look_angle * 2 in which no movement occurs.  They body will stop on the
+## edge of this buffer zone.
+func handle_look() -> void:
+	var ang = get_global_mouse_position().angle()
+	if abs(angle_difference(ang, rotation)) > max_look_angle:
+		if abs(angle_difference(ang + max_look_angle, rotation)) < \
+				abs(angle_difference(ang - max_look_angle, rotation)):
+			rotation = ang + max_look_angle
+		else:
+			rotation = ang - max_look_angle
+	hat.global_rotation = get_global_mouse_position().angle() + PI/2
