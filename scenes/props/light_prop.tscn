@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfj4ao60xr6e6"]
+
+[ext_resource type="Texture2D" uid="uid://dk6fe16wbcti0" path="res://visual/lighting/circle_light.png" id="1_gj6nu"]
+
+[node name="LightProp" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+shadow_enabled = true
+texture = ExtResource("1_gj6nu")
