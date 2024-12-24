@@ -16,4 +16,4 @@ tile_map_data = PackedByteArray("AAACAP3/AAAAAAAAAAABAP3/AAAAAAAAAAAAAP3/AAAAAAA
 position = Vector2(100, 49)
 
 [node name="Lantern" parent="Characters/Player" index="4" instance=ExtResource("3_q4l5b")]
-position = Vector2(7, 9)
+position = Vector2(6, 6)

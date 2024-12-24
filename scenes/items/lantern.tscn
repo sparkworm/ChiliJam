@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://e8lbw5llfa5t"]
+[gd_scene load_steps=4 format=3 uid="uid://e8lbw5llfa5t"]
 
 [ext_resource type="Texture2D" uid="uid://d3nusnc74ioub" path="res://visual/lantern.png" id="1_g42dq"]
 [ext_resource type="Texture2D" uid="uid://be27g2i0h7l6a" path="res://visual/lighting/lantern_light.png" id="2_3xxxf"]
+[ext_resource type="PackedScene" uid="uid://ds6od1afwua0g" path="res://scenes/components/flicker_component.tscn" id="3_syysw"]
 
 [node name="Lantern" type="Node2D"]
 
@@ -11,4 +12,8 @@ texture = ExtResource("1_g42dq")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(1, 0.8, 0.207843, 1)
 energy = 0.5
+shadow_enabled = true
 texture = ExtResource("2_3xxxf")
+
+[node name="FlickerComponent" parent="." node_paths=PackedStringArray("light") instance=ExtResource("3_syysw")]
+light = NodePath("../PointLight2D")
