@@ -21,7 +21,7 @@ func handle_movement() -> void:
 ## max_look_angle * 2 in which no movement occurs.  They body will stop on the
 ## edge of this buffer zone.
 func handle_look() -> void:
-	var ang = get_global_mouse_position().angle()
+	var ang = (get_global_mouse_position() - position).angle()
 	if abs(angle_difference(ang, rotation)) > max_look_angle:
 		if abs(angle_difference(ang + max_look_angle, rotation)) < \
 				abs(angle_difference(ang - max_look_angle, rotation)):
